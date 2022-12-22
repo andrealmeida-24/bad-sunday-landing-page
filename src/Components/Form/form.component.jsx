@@ -9,7 +9,7 @@ import { useMediaQuery } from "@mui/material";
 import { signInWithGooglePopup } from "../../Utilities/Firebase/firebase.config";
 import { createUserDocFromAuth } from "../../Utilities/Firebase/firebase.config";
 import { createAuthUserWithEmailAndPassword } from "../../Utilities/Firebase/firebase.config";
-import { ModalContext, setModalShow } from "../../Contexts/context";
+import { ModalContext } from "../../Contexts/context";
 
 const defaultFormState = {
   displayName: "",
@@ -21,7 +21,7 @@ const defaultFormState = {
 
 const Form = () => {
   const [FormState, setFormState] = useState(defaultFormState);
-  const { displayName, email, password, confirmPassword } = FormState;
+  const { email, password, confirmPassword } = FormState;
   const { setModalShow } = useContext(ModalContext);
 
   const handleChange = (event) => {
@@ -33,7 +33,7 @@ const Form = () => {
   const signInWithGoogle = async () => {
     try {
       const { user } = await signInWithGooglePopup();
-      const userDocRef = await createUserDocFromAuth(user);
+      await createUserDocFromAuth(user);
       setModalShow(true);
       resetFormFields();
     } catch (err) {

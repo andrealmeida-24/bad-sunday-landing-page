@@ -1,9 +1,5 @@
 import { useContext } from "react";
-import {
-  ModalContext,
-  ModalProvider,
-  modalShow,
-} from "../../../Contexts/context";
+import { ModalContext } from "../../../Contexts/context";
 import "./display-message.styles.scss";
 
 const DisplayMessage = ({ ...props }) => {
