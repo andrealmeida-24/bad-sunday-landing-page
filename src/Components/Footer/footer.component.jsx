@@ -1,8 +1,12 @@
 import "./footer.styles.scss";
 
+const animations = {
+  fadeIn: "animate__animated animate__fadeIn animate__delay-1s",
+};
+
 const Footer = () => {
   return (
-    <div className="footer-container">
+    <div className={`footer-container ${animations.fadeIn}`}>
       <h1>bad sunday</h1>
       <p>
         We are a Portugal based clothing brand, inspired by self-expression and
