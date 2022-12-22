@@ -1,0 +1,61 @@
+.footer-container {
+  bottom: 0;
+  padding: 2em 2em 4em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10em;
+  color: white;
+  background-color: black;
+
+  h1 {
+    font-family: "Pirata One", cursive;
+    letter-spacing: 5px;
+    font-size: 1.5em;
+  }
+
+  p {
+    line-height: 1.5em;
+    font-size: 0.8em;
+    text-align: center;
+  }
+
+  .socials {
+    display: flex;
+    align-items: flex-start;
+
+    .fa-brands {
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    .fa-instagram {
+      margin-right: 10px;
+
+      &:hover {
+        background: #d6249f;
+        background: radial-gradient(
+          circle at 30% 107%,
+          #fdf497 0%,
+          #fdf497 5%,
+          #fd5949 45%,
+          #d6249f 60%,
+          #285aeb 90%
+        );
+        border-radius: 10px;
+      }
+    }
+
+    .fa-facebook:hover {
+      color: #00b2ff;
+    }
+  }
+}
+
+// Media Query
+@media screen and (min-width: 1024px) {
+  .footer-container {
+    margin-top: 6em;
+  }
+}

@@ -1,0 +1,93 @@
+.form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 0;
+
+  .form-image {
+    height: 30em;
+  }
+
+  p {
+    font-size: 1em;
+    font-weight: 400;
+    margin-top: 2em;
+  }
+
+  .password-info {
+    font-size: 0.6em;
+    color: gray;
+    text-align: center;
+  }
+
+  form {
+    padding: 0 2em;
+    height: 30em;
+  }
+
+  .buttons-container {
+    transform: translateY(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2em;
+
+    .google-image {
+      height: 2em;
+      background-color: white;
+      border-radius: 2em;
+      margin-left: 0.5em;
+    }
+  }
+}
+
+// Media Query
+// mobile
+@media screen and (max-width: 767px) {
+  .form-container {
+    flex-direction: column;
+    border: none;
+
+    p {
+      font-size: 1em;
+      text-align: center;
+      margin-bottom: 3em;
+    }
+
+    .form-image {
+      width: 100%;
+      height: 20em;
+    }
+
+    .buttons-container {
+      flex-direction: column;
+      gap: 1em;
+    }
+  }
+}
+
+// tablet
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .form-container {
+    flex-direction: column;
+    border: none;
+  }
+
+  .form-image {
+    width: auto;
+  }
+
+  p {
+    font-size: 2em;
+    text-align: center;
+  }
+}
+
+// laptop/lg screen
+@media screen and (min-width: 1024px) {
+  .form-container {
+    transform: translateY(-10px);
+  }
+}

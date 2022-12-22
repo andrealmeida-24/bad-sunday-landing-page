@@ -1,0 +1,14 @@
+.intro-container {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-family: "Pirata One", cursive;
+    color: white;
+    font-size: 3em;
+    font-weight: 200;
+    letter-spacing: 5px;
+  }
+}

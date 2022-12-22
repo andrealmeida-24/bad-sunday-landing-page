@@ -1,0 +1,27 @@
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+
+  h1 {
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 5px;
+    line-height: 100px;
+  }
+}
+
+// Media Query
+
+@media screen and (max-width: 800px) {
+  .hero-container {
+    h1 {
+      font-size: 1em;
+      letter-spacing: 3px;
+    }
+  }
+}

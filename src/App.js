@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect, Fragment } from "react";
+import Intro from "./Components/Intro_Component/intro.component";
+import NavBar from "./Components/Nav-Bar/navbar.component";
+import Directory from "./Components/Directory/directory.component";
 
 function App() {
+  const [canShowIntro, setCanShowIntro] = useState(true);
+  const [canShowNavbar, setCanShowNavbar] = useState(false);
+  const [canShowPage, setCanShowPage] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setCanShowIntro(false), 2600);
+    return () => clearTimeout(timer);
+  });
+
+  useEffect(() => {
+    const timer = setTimeout(() => setCanShowNavbar(true), 2600);
+    return () => clearTimeout(timer);
+  });
+
+  useEffect(() => {
+    const timerPage = setTimeout(() => setCanShowPage(true), 2610);
+    return () => clearTimeout(timerPage);
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      {canShowNavbar ? <NavBar /> : ""}
+      {canShowPage ? <Directory /> : ""}
+      {canShowIntro ? <Intro /> : ""}
+    </Fragment>
   );
 }
 
