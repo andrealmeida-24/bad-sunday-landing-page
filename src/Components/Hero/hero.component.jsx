@@ -3,7 +3,7 @@ import Form from "../Form/form.component";
 import DisplayMessage from "../Display Messages/Display Message/display-message.component";
 
 const animations = {
-  fadeIn: "animate__animated animate__fadeIn",
+  fadeIn: "animate__animated animate__fadeIn animate__delay-1s",
 };
 
 const Hero = () => {
